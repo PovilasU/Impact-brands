@@ -96,3 +96,11 @@ body {
       text-align: left; /* Align text to the left */
     }
   }
+
+
+  @media (min-width: 600px) {
+    .landing-page__nav-links {
+      display: flex !important; /* Force display of menu items in desktop view */
+      
+    }
+  }
