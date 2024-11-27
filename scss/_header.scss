@@ -1,0 +1,37 @@
+// _header.scss
+
+@use 'variables' as *;
+
+.landing-page__header {
+  background-color: $header-background-color; /* Use variable for background color */
+  color: $text-color; /* Use variable for text color */
+  padding: 10px;
+  position: relative;
+}
+
+.landing-page__header-image-container {
+  position: relative;
+  text-align: center;
+}
+
+.landing-page__header-image {
+  width: 100%;
+  height: auto;
+}
+
+.landing-page__header-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 51.36px;
+  letter-spacing: -0.01em;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  background: #FFFFFF; /* Set background color */
+  padding: 10px; /* Optional: Add padding for better readability */
+}

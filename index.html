@@ -19,20 +19,18 @@
         </nav>
       </header>
       <main class="landing-page__main">
-        <h1>TEST</h1>
-        <!-- Slider -->
-        <div class="landing-page__slider">
-          <div class="swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">Slide 1</div>
-              <div class="swiper-slide">Slide 2</div>
-              <div class="swiper-slide">Slide 3</div>
-            </div>
-            <!-- Navigation buttons -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-          </div>
+        <!-- Image header -->
+        <div class="landing-page__header-image-container">
+          <img
+            src="images/main img mobile.jpg"
+            alt="Header Image"
+            class="landing-page__header-image"
+          />
+          <h1 class="landing-page__header-text">
+            New Year, New “You” with [product name]
+          </h1>
         </div>
+
         <!-- Content -->
       </main>
       <footer class="landing-page__footer">
@@ -44,10 +42,10 @@
     <script>
       function toggleMenu() {
         var navLinks = document.getElementById("navLinks");
-        if (navLinks.style.display === "flex") {
+        if (navLinks.style.display === "block") {
           navLinks.style.display = "none";
         } else {
-          navLinks.style.display = "flex";
+          navLinks.style.display = "block";
         }
       }
     </script>

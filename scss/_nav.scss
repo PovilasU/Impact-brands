@@ -1,42 +1,6 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
+// _nav.scss
 
-.landing-page__header {
-  background-color: #F5F5F5; /* Use variable for background color */
-  color: #000; /* Use variable for text color */
-  padding: 10px;
-  position: relative;
-}
-
-.landing-page__header-image-container {
-  position: relative;
-  text-align: center;
-}
-
-.landing-page__header-image {
-  width: 100%;
-  height: auto;
-}
-
-.landing-page__header-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 48px;
-  font-weight: 800;
-  line-height: 51.36px;
-  letter-spacing: -0.01em;
-  text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  background: #FFFFFF; /* Set background color */
-  padding: 10px; /* Optional: Add padding for better readability */
-}
+@use 'variables' as *;
 
 .landing-page__nav {
   display: flex;
@@ -48,8 +12,8 @@ body {
 .landing-page__logo {
   width: 100%;
   text-align: center;
-  color: #000; /* Use variable for text color */
-  font-family: "Plus Jakarta Sans", sans-serif;
+  color: $text-color; /* Use variable for text color */
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 19.08px;
   font-weight: 700;
   line-height: 24.04px;
@@ -65,7 +29,7 @@ body {
   position: absolute;
   left: 20px; /* Move burger menu to the left side */
   top: 20px;
-  color: #000; /* Use variable for text color */
+  color: $text-color; /* Use variable for text color */
 }
 
 .landing-page__nav-links {
@@ -75,11 +39,12 @@ body {
 }
 
 .landing-page__nav-links a {
-  color: #000; /* Use variable for text color */
+  color: $text-color; /* Use variable for text color */
   text-decoration: none;
   margin: 5px 0;
 }
 
+// Media queries for larger screens
 @media (min-width: 600px) {
   .landing-page__nav {
     flex-direction: row;
@@ -87,9 +52,11 @@ body {
     align-items: center;
     width: 100%;
   }
+
   .landing-page__burger {
     display: none;
   }
+
   .landing-page__logo {
     order: 1; /* Ensure logo is centered */
     margin: 0 auto; /* Center the logo */
@@ -100,6 +67,7 @@ body {
     line-height: 40.32px; /* Update line height for non-mobile view */
     letter-spacing: 0.05em; /* Update letter spacing for non-mobile view */
   }
+
   .landing-page__nav-links {
     display: flex;
     flex-direction: row;
@@ -109,6 +77,7 @@ body {
     position: static; /* Reset position */
     background-color: transparent; /* Reset background color */
   }
+
   .landing-page__nav-links a {
     margin: 0 10px; /* Add spacing between links */
     border-bottom: none; /* Remove border */
@@ -116,19 +85,9 @@ body {
     text-align: left; /* Align text to the left */
   }
 }
+
 @media (min-width: 600px) {
   .landing-page__nav-links {
     display: flex !important; /* Force display of menu items in desktop view */
   }
 }
-.landing-page__main {
-  /* Remove padding */
-}
-
-.landing-page__slider {
-  margin: 20px 0;
-}
-
-/* Add your footer styles here */
-
-/*# sourceMappingURL=main.css.map */
