@@ -42,7 +42,16 @@ body {
   color: #FFFFFF; /* Set text color to white */
 }
 
-@media (max-width: 600px) {
+@media (max-width: 393px) {
+  .landing-page__header-text-container {
+    width: 334px;
+    height: 204px;
+    top: 299px;
+    left: 29px;
+    gap: 0px;
+    opacity: 1; /* Ensure opacity is set to 1 for visibility */
+    transform: none; /* Remove transform for specific positioning */
+  }
   .landing-page__header-text {
     font-size: 36px; /* Adjust font size for mobile view */
     line-height: 40px; /* Adjust line height for mobile view */
