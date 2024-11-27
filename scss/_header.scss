@@ -40,6 +40,44 @@
   color: #FFFFFF; /* Set text color to white */
 }
 
+.landing-page__header-text .line1,
+.landing-page__header-text .line2,
+.landing-page__header-text .line3 {
+  display: inline;
+}
+
+@media (max-width: 768px) {
+  .landing-page__header-text .line1 {
+    display: block; /* Ensure line1 is on a separate line */
+  }
+
+  .landing-page__header-text {
+    font-size: 36px; /* Adjust font size for mobile view */
+    line-height: 40px; /* Adjust line height for mobile view */
+  }
+}
+
+@media (min-width: 769px) {
+  .landing-page__header-text-container {
+    max-width: 600px; /* Adjust max-width for tablet and desktop view */
+  }
+
+  .landing-page__header-text .line1,
+  .landing-page__header-text .line2 {
+    display: inline; /* Ensure text does not wrap */
+  }
+
+  .landing-page__header-text .line3 {
+    display: block; /* Ensure line3 is always on a new line */
+  }
+
+  .landing-page__header-text {
+    font-size: 48px; /* Adjust font size for tablet and desktop view */
+    line-height: 51px; /* Adjust line height for tablet and desktop view */
+    white-space: nowrap; /* Ensure text does not wrap */
+  }
+}
+
 .landing-page__button {
   display: flex;
   flex-direction: column;
@@ -66,37 +104,4 @@
   color: #FFFFFF;
   border: none; /* Remove default button border */
   cursor: pointer; /* Change cursor to pointer */
-}
-
-@media (max-width: 393px) {
-  .landing-page__header-text-container {
-    width: 334px;
-    height: 204px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center the container */
-    gap: 0px;
-    opacity: 1; /* Ensure opacity is set to 1 for visibility */
-  }
-
-  .landing-page__header-text {
-    font-size: 36px; /* Adjust font size for mobile view */
-    line-height: 40px; /* Adjust line height for mobile view */
-  }
-
-  .landing-page__button {
-   // width: 258px; /* Adjust width for mobile view */
-    top: calc(50% + 120px); /* Adjust top position for mobile view */
-  }
-}
-
-@media (min-width: 768px) {
-  .landing-page__header-text-container {
-    max-width: 600px; /* Adjust max-width for tablet and desktop view */
-  }
-
-  .landing-page__header-text {
-    font-size: 48px; /* Adjust font size for tablet and desktop view */
-    line-height: 51px; /* Adjust line height for tablet and desktop view */
-  }
 }
