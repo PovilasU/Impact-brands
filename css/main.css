@@ -26,8 +26,8 @@ body {
   width: 100%;
   max-width: 334px;
   left: 50%;
-  top: 299px;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%); /* Center the container */
 }
 
 .landing-page__header-text {
@@ -42,24 +42,59 @@ body {
   color: #FFFFFF; /* Set text color to white */
 }
 
+.landing-page__button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 11px 42px;
+  gap: 10px;
+  position: absolute;
+  width: 360px;
+  height: 54px;
+  left: 50%;
+  top: calc(50% + 150px); /* Adjust top position to place below the text */
+  transform: translateX(-50%);
+  background: #C2110E;
+  border-radius: 15px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27.72px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #FFFFFF;
+  border: none; /* Remove default button border */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
 @media (max-width: 393px) {
   .landing-page__header-text-container {
     width: 334px;
     height: 204px;
-    top: 299px;
-    left: 29px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the container */
     gap: 0px;
     opacity: 1; /* Ensure opacity is set to 1 for visibility */
-    transform: none; /* Remove transform for specific positioning */
   }
   .landing-page__header-text {
     font-size: 36px; /* Adjust font size for mobile view */
     line-height: 40px; /* Adjust line height for mobile view */
   }
+  .landing-page__button {
+    top: calc(50% + 120px); /* Adjust top position for mobile view */
+  }
 }
 @media (min-width: 768px) {
   .landing-page__header-text-container {
     max-width: 600px; /* Adjust max-width for tablet and desktop view */
+  }
+  .landing-page__header-text {
+    font-size: 48px; /* Adjust font size for tablet and desktop view */
+    line-height: 51px; /* Adjust line height for tablet and desktop view */
   }
 }
 .landing-page__nav {
