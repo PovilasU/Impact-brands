@@ -10,7 +10,14 @@
     <div class="landing-page">
       <header class="landing-page__header">
         <nav class="landing-page__nav">
-          <div class="landing-page__burger" onclick="toggleMenu()">&#9776;</div>
+          <input
+            type="checkbox"
+            id="burger-toggle"
+            class="landing-page__burger-toggle"
+          />
+          <label for="burger-toggle" class="landing-page__burger"
+            >&#9776;</label
+          >
           <div class="landing-page__logo">LOGO</div>
           <div class="landing-page__nav-links" id="navLinks">
             <a href="#" onclick="loadContent('shop')">Shop</a>
@@ -39,15 +46,5 @@
     </div>
     <script src="js/main.js"></script>
     <script src="js/slider.js"></script>
-    <script>
-      function toggleMenu() {
-        var navLinks = document.getElementById("navLinks");
-        if (navLinks.style.display === "block") {
-          navLinks.style.display = "none";
-        } else {
-          navLinks.style.display = "block";
-        }
-      }
-    </script>
   </body>
 </html>

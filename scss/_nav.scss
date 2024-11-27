@@ -32,16 +32,33 @@
   color: $text-color; /* Use variable for text color */
 }
 
+.landing-page__burger-toggle {
+  display: none;
+}
+
 .landing-page__nav-links {
   display: none;
   flex-direction: column;
   align-items: center;
+  position: absolute;
+  top: 60px; /* Adjust based on header height */
+  left: 0;
+  width: 100%;
+  background-color: $header-background-color;
+  z-index: 1;
 }
 
 .landing-page__nav-links a {
   color: $text-color; /* Use variable for text color */
   text-decoration: none;
-  margin: 5px 0;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #444;
+}
+
+.landing-page__burger-toggle:checked ~ .landing-page__nav-links {
+  display: flex;
 }
 
 // Media queries for larger screens
