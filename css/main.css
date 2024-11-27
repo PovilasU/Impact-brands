@@ -28,6 +28,7 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%); /* Center the container */
+  padding: 20px 0; /* Add padding to simulate height */
 }
 
 .landing-page__header-text {
@@ -49,8 +50,12 @@ body {
 }
 
 @media (max-width: 768px) {
-  .landing-page__header-text .line1 {
-    display: block; /* Ensure line1 is on a separate line */
+  .landing-page__header-text-container {
+    padding: 40px 0; /* Increase padding to simulate height */
+  }
+  .landing-page__header-text .line1,
+  .landing-page__header-text .line2 {
+    display: block; /* Ensure line1 and line2 are on separate lines */
   }
   .landing-page__header-text {
     font-size: 36px; /* Adjust font size for mobile view */
@@ -60,6 +65,7 @@ body {
 @media (min-width: 769px) {
   .landing-page__header-text-container {
     max-width: 600px; /* Adjust max-width for tablet and desktop view */
+    padding: 20px 0; /* Adjust padding for tablet and desktop view */
   }
   .landing-page__header-text .line1,
   .landing-page__header-text .line2 {
